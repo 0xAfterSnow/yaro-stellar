@@ -73,9 +73,9 @@ stellar contract build --locked
 
 * [x] Architecture & technical specification
 * [x] `YaroVault` Soroban contract + full unit test suite
-* [ ] Stellar Testnet deployment with Testnet USDC (SEP-41 SAC)
+* [x] Stellar Testnet deployment with Testnet USDC (SEP-41 SAC)
 * [x] FastAPI + SQLite RPC event listener bridging `SpendPaused` (Push Alerts) and `SpendExecuted` (Fincra NGN Sandbox Payout)
-* [ ] End-to-end live demo (USDC deposit → Elder Naira spend → On-chain Pause → Sponsor Approval → Naira receipt)
+* [x] End-to-end Testnet + Fincra sandbox demo (deposit → pause → approval → confirmed sandbox payout)
 
 ## Contract semantics
 
@@ -103,9 +103,9 @@ export DAILY_LIMIT=1000000000 # 100 USDC
 ./scripts/deploy-testnet.sh
 ```
 
-The script tests, builds, deploys with constructor arguments, and saves the `yaro-vault` CLI alias. Override `VAULT_ALIAS` for additional vaults. `USDC_TOKEN` defaults to the PRD's Testnet SAC; verify the asset and current Testnet availability before funding. No secret keys are stored in this repository. Deployment has not been performed by this implementation.
+The script tests, builds, deploys with constructor arguments, and saves the `yaro-vault` CLI alias. Override `VAULT_ALIAS` for additional vaults. `USDC_TOKEN` defaults to the PRD's Testnet SAC; verify the asset and current Testnet availability before funding. No secret keys are tracked in Git; demo CLI identities are stored in the ignored `.stellar/` directory. A Testnet demo is deployed; see [deployment details](deployments/README.md).
 
-Part B of `PRD.md` specifies FastAPI and SQLite and supersedes its older Django references. The bridge is implemented in `bridge/`; see [bridge setup and integration](bridge/README.md). Live Testnet/Fincra end-to-end validation remains pending deployment and sandbox credentials.
+Part B of `PRD.md` specifies FastAPI and SQLite and supersedes its older Django references. The bridge is implemented in `bridge/`; see [bridge setup and integration](bridge/README.md). Live deployment and bridge reads are verified. End-to-end Testnet approval, automatic execution, decline, and confirmed Fincra sandbox payouts are verified; see [live test results](deployments/live-test-results.json).
 
 ## License
 

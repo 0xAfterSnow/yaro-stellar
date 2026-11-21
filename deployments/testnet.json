@@ -1,0 +1,14 @@
+{
+  "network": "testnet",
+  "contract_id": "CCQVO7SM6R36F7KUGEPNAPYAXAYLXKWMTWCC6EUX2C2YL7LEGVVLYESC",
+  "sponsor_address": "GAGDNEHY3FC2HS2QXHN56KRKDPIOKCND7CEYQMB4IBCOG6NXXRUZADLL",
+  "elder_address": "GAVHY67QXQEGAGKTIHQ7B4WNZ4ETH527XDAHX5IWKLYMBDOC4E3VMFLN",
+  "offramp_rail": "GAFXIA5HVDEN6YHSJYPEQCZLC7SIJGBWRXUW6LM26NOUOPYWM7IUBSMG",
+  "usdc_token": "CBIELTK6YBZJU5UP2WWQEUCYKLPU6AUNZ2BQ4WWFEIE3USCIHMXQDAMA",
+  "daily_limit_stroops": "1000000000",
+  "wasm_hash": "61c79cb4681d400937c0814623b5a2dc379897ed7ae87bec132e01a619110268",
+  "deployment_tx_hash": "8aeb1a68346210afc84e5875f2131ab0e6e0aa070ccd633cc715f3dbaf002c23",
+  "upload_tx_hash": "3aff16c0cf762e1318aabb0a90281a5d56d7efce196d657d198b8db6a366dbf7",
+  "cli_config_dir": ".stellar",
+  "identities": {"sponsor": "yaro-sponsor", "elder": "yaro-elder", "settlement": "yaro-settlement"}
+}

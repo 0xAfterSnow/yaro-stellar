@@ -1,0 +1,45 @@
+{
+  "network": "testnet",
+  "settlement_environment": "Fincra sandbox",
+  "deposit_usdc": "10",
+  "deposit_tx_hash": "7e7099bc964bcc485bddc2efb07e32637616ae60e6e6432cca4665e574254813",
+  "final_vault_usdc": "8",
+  "automatic_spent_today_usdc": "1",
+  "daily_limit_usdc": "100",
+  "cases": [
+    {
+      "case": "approval",
+      "onchain_tx_id": "1",
+      "status": "PAYOUT_COMPLETED",
+      "amount_usdc_stroops": "10000000",
+      "amount_ngn": "1500",
+      "payout_requested": 1,
+      "last_error": null,
+      "request_tx_hash": "8423c416ad715c93ca3af9b2f825888d95b39623581db25f54ed1b7c4190db8d",
+      "resolution_tx_hash": "8a938d67878a15ed4d60b9ccffdbfb4d015dfc76e93f37dcc545f5bfd7889be1"
+    },
+    {
+      "case": "auto",
+      "onchain_tx_id": "2",
+      "status": "PAYOUT_COMPLETED",
+      "amount_usdc_stroops": "10000000",
+      "amount_ngn": "1500",
+      "payout_requested": 1,
+      "last_error": null,
+      "request_tx_hash": "448b909a043436dd3fd7f8c392b539129fac7e8223005d7330f5326cbb74386c",
+      "resolution_tx_hash": null
+    },
+    {
+      "case": "decline",
+      "onchain_tx_id": "3",
+      "status": "DECLINED",
+      "amount_usdc_stroops": "10000000",
+      "amount_ngn": "1500",
+      "payout_requested": 0,
+      "last_error": null,
+      "request_tx_hash": "530da396b4f4550c70e44ab968ea702cce062bfef38522f84db245244abb338a",
+      "resolution_tx_hash": "1c8da1b0e199c1d464f93f34fcc0c3a4d2711cef5e740cdda303caf674c0f9a4"
+    }
+  ],
+  "rejected_event_count": 0
+}
