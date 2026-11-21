@@ -74,7 +74,7 @@ stellar contract build --locked
 * [x] Architecture & technical specification
 * [x] `YaroVault` Soroban contract + full unit test suite
 * [ ] Stellar Testnet deployment with Testnet USDC (SEP-41 SAC)
-* [ ] FastAPI + SQLite RPC event listener bridging `SpendPaused` (Push Alerts) and `SpendExecuted` (Fincra NGN Sandbox Payout)
+* [x] FastAPI + SQLite RPC event listener bridging `SpendPaused` (Push Alerts) and `SpendExecuted` (Fincra NGN Sandbox Payout)
 * [ ] End-to-end live demo (USDC deposit → Elder Naira spend → On-chain Pause → Sponsor Approval → Naira receipt)
 
 ## Contract semantics
@@ -105,7 +105,7 @@ export DAILY_LIMIT=1000000000 # 100 USDC
 
 The script tests, builds, deploys with constructor arguments, and saves the `yaro-vault` CLI alias. Override `VAULT_ALIAS` for additional vaults. `USDC_TOKEN` defaults to the PRD's Testnet SAC; verify the asset and current Testnet availability before funding. No secret keys are stored in this repository. Deployment has not been performed by this implementation.
 
-Part B of `PRD.md` specifies FastAPI and SQLite and supersedes its older Django references. The bridge is the next implementation phase.
+Part B of `PRD.md` specifies FastAPI and SQLite and supersedes its older Django references. The bridge is implemented in `bridge/`; see [bridge setup and integration](bridge/README.md). Live Testnet/Fincra end-to-end validation remains pending deployment and sandbox credentials.
 
 ## License
 

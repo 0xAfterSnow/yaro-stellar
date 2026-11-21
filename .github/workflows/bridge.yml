@@ -1,0 +1,20 @@
+name: Bridge
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: bridge/requirements*.txt
+      - run: pip install -r bridge/requirements-dev.txt
+      - run: ruff check bridge
+      - run: ruff format --check bridge
+      - run: python -m pytest bridge/tests -q
